@@ -1,0 +1,34 @@
+
+
+=dependent_select_demo
+
+This is a sample application for dependent_select.
+
+The library can be found in http://github.com/splendeo/dependent_select
+
+Google group on http://groups.google.com/group/dependent_select?pli=1
+
+==Installation
+
+* Clone the test app repository
+    git clone git://github.com/splendeo/dependent_select_demo.git
+
+* Set up the database connection data by copying and possibly modifying config/database.yml
+    cp config/database.yml.example config/database.yml
+
+* Install gems
+    rake gems:install
+
+* Start server and point your browser to localhost:3000
+    ./script/server
+    firefox http://localhost:3000
+
+==Interesting stuff
+
+* config/environment.rb - see how the gem is configured there
+* models/city.erb and models/province.erb - see how to set up a model
+* controllers/cities_controller.rb - the index action is interesting
+* views/cities/index.html.erb - example of ds without a form_for
+* views/cities/_form.html.erb, views/provinces/_form.erb - you can see dependent select in action
+* views/layouts/application.rb - see how dependent_select_includes is called
+
